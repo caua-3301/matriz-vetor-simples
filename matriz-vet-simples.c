@@ -58,14 +58,12 @@ void adicionarValor(Matriz * mat,  int num, int i, int j){
 
 //Procedimento que exibe a matriz
 void printarMatriz(Matriz * mat){
-	int k, aux = 1;
-	for (k = 0; k < mat -> linhas * mat -> colunas; k++, aux++){
-		printf ("%d ", mat -> vet[k]);
-		//Quebra de linha
-		if (aux == mat -> colunas){
-			printf ("\n");
-			aux = 0;
+	int i, j;
+	for (i = 0; i < mat -> linhas; i++){
+		for (j = 0; j< mat -> colunas; j++){
+			printf ("%d  ",  mat -> vet[ i* mat -> colunas + j]);
 		}
+		printf ("\n");
 	}
 }
 
